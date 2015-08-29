@@ -1,0 +1,4 @@
+%h3
+  = @story.body
+= link_to "edit", edit_story_path
+= link_to "delete", story_path, method: :delete, data: {confirm: 'are you sure?'}

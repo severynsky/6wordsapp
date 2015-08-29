@@ -3,4 +3,4 @@
 - @stories.each do |story|
   %ul
     %li
-      = story.body
+      = link_to story.body, story_path(story.id)
