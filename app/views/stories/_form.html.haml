@@ -1,0 +1,7 @@
+= bootstrap_form_for @story, html: {class: 'add-product-form', multipart: true} do |s|
+  .form-group
+    = s.text_area :body
+  .form_group
+  -# = s.collection_select(:category_id, @category, :id, :title)
+
+  = s.submit
