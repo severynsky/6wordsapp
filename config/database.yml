@@ -64,6 +64,8 @@ test:
 #
 production:
   <<: *default
-  database: sevenwordsapp_production
-  username: sevenwordsapp
-  password: <%= ENV['SEVENWORDSAPP_DATABASE_PASSWORD'] %>
+  database: df301n944vslki
+  username: qxxrlygqdkewko
+  password: <%= ENV["DATA_KEY"] %>
+  host: ec2-54-83-58-191.compute-1.amazonaws.com
+  url: postgres://qxxrlygqdkewko:-gYP1wa2ggG8VWTltjaKFNV4Qe@ec2-54-83-58-191.compute-1.amazonaws.com:5432/df301n944vslki
