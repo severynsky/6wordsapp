@@ -4,3 +4,5 @@
   %ul
     %li
       = link_to story.body, story_path(story.id)
+      %span.pull-right
+        = story.created_at.to_s(:short)

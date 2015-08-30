@@ -13,6 +13,6 @@
   .form-group
     = s.text_area :body
   .form_group
-  -# = s.collection_select(:category_id, @category, :id, :title)
+  = s.collection_select(:category_id, @categories, :id, :title, include_blank: true)
 
   = s.submit

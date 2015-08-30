@@ -1,6 +1,8 @@
 class Story < ActiveRecord::Base
   # before_save :count
 
+  belongs_to :category
+
   validates :body, presence: true, if: :count?
 
   protected
