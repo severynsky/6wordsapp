@@ -1,4 +1,15 @@
 = bootstrap_form_for @story, html: {class: 'add-product-form', multipart: true} do |s|
+
+  - if @story.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@story.errors.count, "error")
+        prohibitet this story for being saved:
+    %ul
+      - @story.errors.full_messages.each do |err|
+        %li
+          = err
+
   .form-group
     = s.text_area :body
   .form_group

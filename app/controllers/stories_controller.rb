@@ -36,6 +36,7 @@ class StoriesController < ApplicationController
   def destroy
     if @story.destroy
       redirect_to '/'
+      flash[:notice] = "Story has been deleted!"
     end
   end
 
