@@ -11,7 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+//= require story
+
+$(document).ready(function(){
+
+  $('.dropdown-toggle').dropdown();
+
+});

@@ -1,11 +1,27 @@
-%h1
-  hello world!
+%h1.center.main-title
+  %b
+    six
+  Words Stories
+.dropdown.pull-right
+  %button{class: "btn btn-default dropdown-toggle", type: "button", id: "dropdownMenu1", dataToggle: "dropdown", ariaHaspopup: "true", ariaExpanded: "true"}
+    sort by
+    %span.caret
+  %ul{class: "dropdown-menu", ariaLabelledby: "dropdownMenu1"}
+    %li
+      %a{:href => ""}
+        Action
+.clear
+%hr/
 - @stories.each do |story|
-  %ul
+  %ul.story-list
     %li
       = link_to story.body, story_path(story.id)
-      %span.pull-right
+      %span.story-item-date
         = story.created_at.to_s(:short)
+      %span.rate.pull-right
         rate:
-        / - if story.rate != 0
         = story.rate
+        %span.set-rate
+          = link_to "+", increase_rate_story_path(story)
+        %span.set-rate
+          = link_to "-", decrease_rate_story_path(story)

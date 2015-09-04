@@ -1,3 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+@import "story";
+@import "homepage";
+
+.center{
+  text-align: center;
+}
+.clear{
+  clear: both;
+}
+
+body{
+  font-size: 16px;
+}
